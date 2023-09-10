@@ -1,0 +1,17 @@
+body{
+    background-image: url(https://wallpapercave.com/wp/YHlk56g.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.navbar{
+    background-color: black;
+}
+
+.navbar a{
+    color: rgba(242, 145, 34, 0.767);
+}
+
+.dropdown-menu{
+    background-color: green;
+}

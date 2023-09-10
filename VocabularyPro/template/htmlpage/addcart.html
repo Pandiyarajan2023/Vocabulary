@@ -1,0 +1,42 @@
+<html>
+    {% extends 'htmlpage/home.html' %}
+
+    {%block body_block%}
+
+    <style>
+    .container{
+    width: 550px;
+    height: 80vh;
+    background-color: rgba(240, 248, 255, 0.314);
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba(224, 139, 35, 0.448);
+    color: rgba(242, 145, 34, 0.767);
+    }
+
+    .form-horizontal{
+        margin-top: 50px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 5px;
+        row-gap: 20px;
+    }
+    .ainput{
+        background-color: orange;
+    }
+    </style>
+
+    <div class="container" align="center">
+        <h1><b>ADD VOCABULARY</b></h1>
+        <form class="form-horizontal" method="POST">
+            {{addpro.as_p}}
+            {% csrf_token %}
+            <input class="ainput" type="submit" value="ADD VOCABULARY">
+            <input class="ainput" type="reset" value="RESET DETAILS">
+
+        </form>
+
+    </div>
+    {% endblock %} 
+</html>

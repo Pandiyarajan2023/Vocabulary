@@ -1,0 +1,39 @@
+<html lang="en">
+  {% extends 'htmlpage/home.html' %}
+  {%block body_block%}
+  <style>
+    table tr th{
+      color: rgba(242, 145, 34, 0.767);
+    }
+    .table-active{
+      color: rgba(242, 145, 34, 0.767);
+    }
+  </style>
+    {% if viewpro %}
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Word</th>
+          <th scope="col">Meaning</th>
+          <th scope="col">Example</th>
+          <th scope="col">Name</th>
+        </tr>
+      </thead>
+      {% for cart in viewpro %}
+      <tbody>
+          
+        <tr class="table-active">
+          <th scope="row">{{cart.Word}}</th>
+          <td>{{cart.Meaning}}</td>
+          <td>{{cart.Example}}</td>
+          <td>{{cart.Name}}</td>
+        </tr>
+        
+      </tbody>
+      {% endfor %}
+      {% else %}
+      <h1>Record not found</h1>
+   {% endif %}
+    </table>
+    {% endblock %}
+</html>
